@@ -1,0 +1,42 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "lib": ["dom", "dom.iterable", "esnext"],
+        "allowJs": true,
+        "skipLibCheck": true,
+        "strictNullChecks": false,
+        "strict": true,
+        "forceConsistentCasingInFileNames": true,
+        "noEmit": true,
+        "esModuleInterop": true,
+        "module": "esnext",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "jsx": "preserve",
+        "downlevelIteration": true,
+        "types": ["node", "react", "react-dom"],
+        "plugins": [
+            {
+                "name": "next"
+            }
+        ],
+        "paths": {
+            "react": ["./node_modules/@types/react"],
+            "@*": ["./src/*"],
+            "@pages/*": ["./pages/*"],
+            "@/*": ["./src/*"],
+            "@components/*": ["./src/components/*"],
+            "@providers/*": ["./src/providers/*"],
+            "@contexts/*": ["./src/contexts/*"],
+            "@utils/*": ["./src/utils/*"],
+            "@gemini-proxy/core": ["../../packages/core/src/index.ts"],
+            "@gemini-proxy/vercel": ["../../packages/vercel/src/index.ts"],
+            "@gemini-proxy/database": ["../../packages/database/index.ts"]
+        },
+        "incremental": true,
+        "baseUrl": "."
+    },
+    "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "next.config.mjs"],
+    "exclude": ["node_modules", ".open-next", "cloudflare-env.d.ts"]
+}
